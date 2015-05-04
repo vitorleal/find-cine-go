@@ -22,15 +22,13 @@ import (
 )
 
 func main() {
-  findcine := FineCine{}
-
-  theathers, err := findcine.Near("Miami")
+  theaters, err := findcine.Near("Miami")
 
   if err != nil {
     fmt.Println(err.Error())
   }
 
-  fmt.Println(theathers)
+  fmt.Println(theaters)
 }
 ```
 
