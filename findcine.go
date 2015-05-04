@@ -10,10 +10,6 @@ func Version() string {
   return "0.1.0"
 }
 
-// Find Cine struct
-type FindCine struct {
-}
-
 // Theater struct
 type Theater struct {
   Id string
@@ -32,9 +28,9 @@ type Movie struct {
 
 
 // Get the near theaters and movies based on and address
-func (findcine *FindCine) Near(address string) (theaters []Theater, err error) {
+func Near(address string) (theaters []Theater, err error) {
 
-  doc, err := goquery.NewDocument(findcine.MakeUrl(address))
+  doc, err := goquery.NewDocument(MakeUrl(address))
 
   if err != nil {
     return nil, err

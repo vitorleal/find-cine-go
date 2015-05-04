@@ -11,7 +11,7 @@ const (
 )
 
 // Create the Url using the address as the near parameter
-func (findcine *FindCine) MakeUrl(address string) string {
+func MakeUrl(address string) string {
 
   params := url.Values{}
   params.Add("near", address)

@@ -5,10 +5,8 @@ import (
 )
 
 func TestMakeUrl(t *testing.T) {
-  findcine := FindCine{}
-
-  url := findcine.MakeUrl("Miami")
-  url2 := findcine.MakeUrl("Calle del Pinar")
+  url := MakeUrl("Miami")
+  url2 := MakeUrl("Calle del Pinar")
 
   if url != "http://www.google.com/movies?near=Miami" {
     t.Error("Error in the MakeUrl")
