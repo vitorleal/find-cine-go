@@ -11,4 +11,4 @@ go get github.com/vitorleal/find-cine-go
 
 ## Docs
 
-Commign soon
+Comming soon
