@@ -21,9 +21,9 @@ type Theater struct {
 
 // Movie struct
 type Movie struct {
-  Name string
+  Title string
   Duration string
-  Time []string
+  Times []string
 }
 
 
@@ -45,6 +45,25 @@ func Near(address string) (theaters []Theater, err error) {
     phone := strings.Split(info, " - ")[1]
 
     theater := Theater{Name: name.Text(), Address: addr, Phone: phone}
+
+    var movies []Movie
+
+    s.Find(".showtimes .movie").Each(func (i int, s *goquery.Selection) {
+      title := s.Find(".name a").Text()
+      duration := s.Find(".info").Text()
+      timesString := s.Find(".times > span").Text()
+      var times []string
+
+      for _, val := range strings.Split(timesString, " ") {
+        times = append(times, strings.TrimSpace(val))
+      }
+
+      movie := Movie{Title: title, Duration: duration, Times: times}
+      movies = append(movies, movie)
+    })
+
+    theater.Movies = movies
+
     theaters = append(theaters, theater)
   })
 
