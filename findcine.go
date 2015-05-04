@@ -27,7 +27,7 @@ type Movie struct {
 }
 
 
-// Get the near theaters and movies based on and address
+// Get the near theaters and movies based on address
 func Near(address string) (theaters []Theater, err error) {
 
   doc, err := goquery.NewDocument(MakeUrl(address))

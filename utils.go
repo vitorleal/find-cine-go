@@ -5,7 +5,7 @@ import (
   "fmt"
 )
 
-// The Google Movies default url
+// Google Movies default url
 const (
   URL = "http://www.google.com/movies"
 )
