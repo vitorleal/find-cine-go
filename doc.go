@@ -1,6 +1,7 @@
 // Package find-cine to search for movie theaters close to an address.
 //
 // Example:
+//
 //  package main
 //
 //  import (
@@ -9,12 +10,10 @@
 //  )
 //
 //  func main() {
-//    findcine = FindCine{}
-//
 //    theaters, err := findcine.Near("Miami")
 //
 //    if err != nil {
-//      fmt.Println(err)
+//      fmt.Println(err.Error())
 //    }
 //
 //    fmt.Println(theaters)
