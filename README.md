@@ -1,4 +1,4 @@
-# Find Cine Golang [![Build Status](https://travis-ci.org/vitorleal/find-cine-go.svg)](https://travis-ci.org/vitorleal/find-cine-go) [![GoDoc](https://godoc.org/github.com/vitorleal/find-cine-go?status.png)](https://godoc.org/github.com/vitorleal/find-cine-go)
+# Find Cine Golang [![GoDoc](https://godoc.org/github.com/vitorleal/find-cine-go?status.png)](https://godoc.org/github.com/vitorleal/find-cine-go)
 
 Find move theaters near and address using the [Google Moveis](http://www.google.com/movies) page.
 
@@ -9,6 +9,28 @@ Find move theaters near and address using the [Google Moveis](http://www.google.
 go get github.com/vitorleal/find-cine-go
 ```
 
-## Docs
+## Using
 
-Comming soon
+How to use:
+
+```
+package main
+
+import (
+  "fmt"
+  "github.com/vitorleal/find-cine-go"
+)
+
+func main() {
+  findcine := FineCine{}
+
+  theathers, err := findcine.Near("Miami")
+
+  if err != nil {
+    fmt.Println(err.Error())
+  }
+
+  fmt.Println(theathers)
+}
+```
+
