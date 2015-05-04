@@ -5,13 +5,16 @@ import (
   "github.com/PuerkitoBio/goquery"
 )
 
+// Return the current implementation version
 func Version() string {
   return "0.1.0"
 }
 
+// Find Cine struct
 type FindCine struct {
 }
 
+// Theater struct
 type Theater struct {
   Id string
   Name string
@@ -20,6 +23,7 @@ type Theater struct {
   Movies []Movie
 }
 
+// Movie struct
 type Movie struct {
   Name string
   Duration string
@@ -27,6 +31,7 @@ type Movie struct {
 }
 
 
+// Get the near theaters and movies based on and address
 func (findcine *FindCine) Near(address string) (theaters []Theater, err error) {
 
   doc, err := goquery.NewDocument(findcine.MakeUrl(address))
