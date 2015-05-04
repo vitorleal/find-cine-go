@@ -13,7 +13,7 @@ go get github.com/vitorleal/find-cine-go
 
 How to use:
 
-```
+```go
 package main
 
 import (
