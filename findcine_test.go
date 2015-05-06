@@ -35,3 +35,4 @@ func TestFindCineNear(t *testing.T) {
     }
   }
 }
+

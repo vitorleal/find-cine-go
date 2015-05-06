@@ -57,7 +57,7 @@ func Near(address string) (theaters []Theater, err error) {
 
     s.Find(".showtimes .movie").Each(func (i int, s *goquery.Selection) {
       title := s.Find(".name a").Text()
-      duration := s.Find(".info").Text()
+      duration := GetMovieInfo(s.Find(".info").Text())
       timesString := s.Find(".times > span").Text()
 
       // times list

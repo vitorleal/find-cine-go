@@ -53,3 +53,9 @@ func GetPhoneNumber(phone string) string {
   return ""
 }
 
+// Get the movies info
+func GetMovieInfo(info string) (duration string) {
+    split := strings.Split(info, " - ")
+
+    return split[0]
+}

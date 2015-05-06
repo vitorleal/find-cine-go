@@ -81,3 +81,11 @@ func TestGetPhoneNumber(t *testing.T) {
   }
 }
 
+func TestGetMovieInfo(t *testing.T) {
+  info := "2hr 3min - Rated R - Drama - Trailer - IMDb"
+  descripton := GetMovieInfo(info)
+
+  if descripton != "2hr 3min" {
+    t.Error("Error geting the description")
+  }
+}
